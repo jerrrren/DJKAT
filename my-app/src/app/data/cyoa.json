@@ -6,8 +6,10 @@
             "time": "6:00 AM",
             "title": "Wake Up",
             "description": "The morning air hangs heavy with uncertainty as you rise. Recent infrastructure alerts have made it clear - the water and electricity you once took for granted are now precious commodities. Through your window, the dawn breaks over a city learning to adapt. As you prepare for your morning routine, each drop of water and volt of electricity feels more valuable than ever.",
+            "image_path": "scene1/scenario.png",
             "options": [
                 {
+                    "image_path": "scene1/6AM_OPTION_1.png",
                     "name": "Take a cold shower",
                     "cost": {
                         "water": 10,
@@ -17,6 +19,7 @@
                     "justification": "Cold showers use significantly less water as they are shorter and require no water heating. The water flow is typically reduced to minimize discomfort, directly translating to lower water consumption while providing basic hygiene needs."
                 },
                 {
+                    "image_path": "scene1/6AM_OPTION_2.png",
                     "name": "Take a hot shower",
                     "cost": {
                         "water": 20,
@@ -26,6 +29,7 @@
                     "justification": "Hot water requires extensive energy to heat, consuming both water and electricity. The water heater operates at full capacity, drawing substantial power and using more water volume to achieve and maintain desired temperature, while the prolonged shower time increases overall resource drain."
                 },
                 {
+                    "image_path": "scene1/6AM_OPTION_3.png",
                     "name": "Quick wipe-down with washcloth",
                     "cost": {
                         "water": 5,

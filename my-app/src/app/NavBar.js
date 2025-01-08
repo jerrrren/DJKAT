@@ -26,6 +26,16 @@ const NavBar = () => {
                 >
                     About Us
                 </Link>
+
+                <Link
+                    href="/adventure"
+                    className={`mr-6 text-lg font-medium transition-colors duration-200 ${pathname === '/adventure'
+                            ? 'text-white border-b-2 border-blue-500'
+                            : 'text-gray-300 hover:text-white'
+                        }`}
+                >
+                    Adventure
+                </Link>
             </nav>
         </header>
     );
