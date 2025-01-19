@@ -45,8 +45,10 @@
             "time": "7:00 AM",
             "title": "Breakfast",
             "description": "You stand in your kitchen, surveying the limited options before you. With supply chains becoming increasingly unpredictable, each meal requires careful consideration of both nutrition and resource usage. Your breakfast choice could set the tone for the entire day.",
+            "image_path": "scene2/scenario.png",
             "options": [
                 {
+                    "image_path": "scene2/7AM_OPTION_1.png",
                     "name": "Microwave instant oatmeal",
                     "cost": {
                         "water": 0,
@@ -56,6 +58,7 @@
                     "justification": "Microwaving requires minimal electricity, typically using around 600-1200 watts for a short duration. Instant oatmeal needs minimal preparation time, translating to low energy consumption while providing basic nutritional intake."
                 },
                 {
+                    "image_path": "scene2/7AM_OPTION_2.png",
                     "name": "Cook full breakfast",
                     "cost": {
                         "water": 10,
@@ -65,6 +68,7 @@
                     "justification": "A full breakfast involves multiple cooking appliances like stoves and ovens, consuming significant electricity. Additional water is used for washing ingredients, cooking, and cleaning, making this option the most resource-intensive but nutritionally complete choice."
                 },
                 {
+                    "image_path": "scene2/7AM_OPTION_3.png",
                     "name": "Cold breakfast",
                     "cost": {
                         "water": 0,
@@ -80,8 +84,10 @@
             "time": "1:00 PM",
             "title": "Work Environment",
             "description": "The merciless afternoon sun transforms your workspace into a challenge of endurance. The city's strained power grid groans under the collective burden of millions seeking relief from the heat. As the temperature climbs, you're faced with the daily dilemma of balancing comfort against conservation.",
+            "image_path": "scene3/scenario.png",
             "options": [
                 {
+                    "image_path": "scene3/1PM_OPTION_1.png",
                     "name": "Use fan",
                     "cost": {
                         "water": 0,
@@ -91,6 +97,7 @@
                     "justification": "Fans consume relatively low electricity, typically 50-100 watts, providing basic air circulation. While less effective than air conditioning, they offer some cooling with minimal energy drain, making them a resource-efficient cooling solution."
                 },
                 {
+                    "image_path": "scene3/1PM_OPTION_2.png",
                     "name": "Use air conditioning",
                     "cost": {
                         "water": 0,
@@ -100,6 +107,7 @@
                     "justification": "Air conditioning units consume substantial electricity, often ranging from 500-1500 watts, depending on size and efficiency. The comprehensive cooling comes at a high energy cost, potentially stressing the electrical grid and causing significant resource depletion."
                 },
                 {
+                    "image_path": "scene3/1PM_OPTION_3.png",
                     "name": "Open windows",
                     "cost": {
                         "water": 0,
@@ -115,8 +123,10 @@
             "time": "6:00 PM",
             "title": "Dinner Preparation",
             "description": "Evening light filters through your windows as you step into your kitchen, the day's challenges still fresh in your mind. The contents of your pantry tell a story of careful rationing and thoughtful planning. Your evening meal - once a simple affair of preference and craving - has evolved into a delicate equation of resource management.",
+            "image_path": "scene4/scenario.png",
             "options": [
                 {
+                    "image_path": "scene4/6PM_OPTION_1.png",
                     "name": "Cook fresh meal",
                     "cost": {
                         "water": 10,
@@ -126,6 +136,7 @@
                     "justification": "Cooking a fresh meal requires multiple appliances like stoves, ovens, and potentially microwaves, consuming significant electricity. Water is used for ingredient preparation, cooking, and cleaning, making this the most resource-intensive but nutritionally complete option."
                 },
                 {
+                    "image_path": "scene4/6PM_OPTION_2.png",
                     "name": "Eat preserved foods",
                     "cost": {
                         "water": 0,
@@ -135,6 +146,7 @@
                     "justification": "Preserved foods require minimal heating, typically using a microwave or minimal stove time, thus consuming low electricity. However, the preserved nature of the food results in lower nutritional value and potential health compromises."
                 },
                 {
+                    "image_path": "scene4/6PM_OPTION_3.png",
                     "name": "Cold sandwich",
                     "cost": {
                         "water": 0,
@@ -150,8 +162,10 @@
             "time": "9:00 PM",
             "title": "Evening Comfort",
             "description": "Night brings little relief from the day's heat, and your thoughts turn to securing restful sleep in these challenging conditions. The darkness outside is punctuated by the dim lights of other homes, each facing the same difficult choices. Your decision about tonight's sleeping conditions will affect not only your rest but your readiness for tomorrow's challenges.",
+            "image_path": "scene5/scenario.png",
             "options": [
                 {
+                    "image_path": "scene5/9PM_OPTION_1.png",
                     "name": "Sleep with AC",
                     "cost": {
                         "water": 0,
@@ -161,6 +175,7 @@
                     "justification": "Running air conditioning throughout the night consumes the most electricity, typically 500-1500 watts continuously. The extended operation time multiplies the energy consumption, representing the most resource-intensive cooling method with potential broader infrastructure implications."
                 },
                 {
+                    "image_path": "scene5/9PM_OPTION_2.png",
                     "name": "Use fan overnight",
                     "cost": {
                         "water": 0,
@@ -170,6 +185,7 @@
                     "justification": "Fans consume lower electricity when running continuously, around 50-100 watts. They provide basic air circulation and mild cooling, offering a compromise between comfort and resource conservation with moderate energy expenditure."
                 },
                 {
+                    "image_path": "scene5/9PM_OPTION_3.png",
                     "name": "Open windows",
                     "cost": {
                         "water": 0,
