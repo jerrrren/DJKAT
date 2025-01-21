@@ -14,12 +14,12 @@ const OptionsButton = ({ option_id, currentId }) => {
   const option_image_url =
     "/images/" + cyoa.scenarios[currentId].options[option_id].image_path;
 
-    const water = useUtilitiesTracker((state) => state.water);
-    const updateWater = useUtilitiesTracker((state) => state.setWater);
-    const electricity = useUtilitiesTracker((state) => state.electricity);
-    const updateElectricity = useUtilitiesTracker((state) => state.setElectricity);
-    const hp = useUtilitiesTracker((state) => state.hp);
-    const updateHp = useUtilitiesTracker((state) => state.setHp);
+  const water = useUtilitiesTracker((state) => state.water);
+  const updateWater = useUtilitiesTracker((state) => state.setWater);
+  const electricity = useUtilitiesTracker((state) => state.electricity);
+  const updateElectricity = useUtilitiesTracker((state) => state.setElectricity);
+  const hp = useUtilitiesTracker((state) => state.hp);
+  const updateHp = useUtilitiesTracker((state) => state.setHp);
 
   const incrementScene = useCurrentScene((state) => state.incrementSceneId);
 
@@ -27,7 +27,7 @@ const OptionsButton = ({ option_id, currentId }) => {
 
   return (
     <button
-      className="grid-item"
+      className="grid-item bg-gray-200 hover:bg-gray-300 p-2 flex flex-row items-center rounded-lg"
       onClick={() => {
         updateElectricity(option_data.cost.electricity);
         updateWater(option_data.cost.water);
@@ -44,14 +44,17 @@ const OptionsButton = ({ option_id, currentId }) => {
         }
       }}
     >
-      <div className="border border-black p-2 flex flex-row items-center">
-        <Image
-          alt={option_data.name}
-          src={option_image_url}
-          width={160}
-          height={90}
-        />
-        {option_data.name} -{option_data.cost.water} water -{option_data.cost.electricity} electricity -{option_data.cost.hp} hp
+      <Image
+        alt={option_data.name}
+        src={option_image_url}
+        width={160}
+        height={90}
+      />
+      <div className="flex flex-col pl-2">
+        <div className="font-bold">{option_data.name}</div>
+        <div className="text-sm">
+          -{option_data.cost.water} water -{option_data.cost.electricity} electricity -{option_data.cost.hp} hp
+        </div>
       </div>
     </button>
   );

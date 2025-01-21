@@ -19,23 +19,30 @@ const Scene = () => {
   };
 
   return (
-    <>
-      <h1>Water: {water}</h1>
-      <h1>Electricity: {electricity}</h1>
-      <h1>HP: {hp}</h1>
-      <div className="flex flex-col items-center justify-center h-[40vh] relative py-12 px-4 sm:px-6 lg:px-8 m-4">
-        <Image
-          alt="scene"
-          src={sceneImagePath}
-          fill
-          className="object-contain"
-        ></Image>
+    <div className="min-h-screen flex flex-col items-center relative">
+      <div className="flex justify-center gap-4 py-2 px-4 sm:px-6 lg:px-8 items-center">
+        <div className="flex-col bg-white rounded-lg shadow-lg p-4 self-center">
+          <p className="text-lg">Water: {water}</p>
+          <p className="text-lg">Electricity: {electricity}</p>
+          <p className="text-lg">HP: {hp}</p>
+        </div>
+        <div className="bg-white rounded-lg shadow-lg p-4 self-center">
+          <Image
+            alt="scene"
+            src={sceneImagePath}
+            className="object-contain mx-auto"
+            width={600}
+            height={400}
+          ></Image>
+        </div>
       </div>
-      <h1>{cyoa.scenarios[currentId].title}</h1>
-      <h1>{cyoa.scenarios[currentId].description}</h1>
-      <h1>{cyoa.scenarios[currentId].time}</h1>
-      <Options handleClick = {handleClick} currentId={currentId}></Options>
-    </>
+      <div className="bg-white p-4 rounded-b-lg">
+        <h1 className="text-2xl font-bold">{cyoa.scenarios[currentId].title}</h1>
+        <h2 className="text-lg font-light">{cyoa.scenarios[currentId].time}</h2>
+        <p className="text-lg">{cyoa.scenarios[currentId].description}</p>
+        <Options handleClick={handleClick} currentId={currentId}></Options>
+      </div>
+    </div>
   );
 };
 

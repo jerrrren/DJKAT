@@ -6,7 +6,7 @@ import OptionsButton from "./options_button";
 const Options = ({ currentId }) => {
 
   return (
-    <div className="grid grid-rows-2 grid-flow-col">
+    <div className="grid grid-rows-2 grid-flow-col gap-2">
       <OptionsButton option_id={0} currentId={currentId}></OptionsButton>
       <OptionsButton option_id={1} currentId={currentId}></OptionsButton>
       <OptionsButton option_id={2} currentId={currentId}></OptionsButton>
