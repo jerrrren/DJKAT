@@ -28,7 +28,7 @@ const Scene = () => {
       <h1>{cyoa.scenarios[currentId].title}</h1>
       <h1>{cyoa.scenarios[currentId].description}</h1>
       <h1>{cyoa.scenarios[currentId].time}</h1>
-      <Options currentId={currentId}></Options>
+      <Options handleClick = {handleClick} currentId={currentId}></Options>
     </div>
   );
 };
