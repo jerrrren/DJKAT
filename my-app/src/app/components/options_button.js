@@ -6,6 +6,9 @@ import {
   useCurrentScene,
 } from "../hooks/stats";
 import { use } from "react";
+import { MdWaterDrop } from "react-icons/md";
+import { BsLightningChargeFill } from "react-icons/bs";
+import { GiHealthNormal } from "react-icons/gi";
 
 const MAX_SCENE_ID = 4;
 
@@ -52,8 +55,20 @@ const OptionsButton = ({ option_id, currentId }) => {
       />
       <div className="flex flex-col pl-2">
         <div className="font-bold">{option_data.name}</div>
-        <div className="text-sm">
-          -{option_data.cost.water} water -{option_data.cost.electricity} electricity -{option_data.cost.hp} hp
+        <div className="text-sm flex flex-row items-center space-x-2 ">
+          <div>Cost: </div>
+          <div>
+            {option_data.cost.water}
+            <MdWaterDrop className="inline-block text-blue-500" />
+          </div>
+          <div>
+            {option_data.cost.electricity}
+            <BsLightningChargeFill className="inline-block text-yellow-500" />
+          </div>
+          <div>
+            {option_data.cost.hp}
+            <GiHealthNormal className="inline-block text-red-500" />
+          </div>
         </div>
       </div>
     </button>

@@ -5,6 +5,9 @@ import Options from "./options";
 import Image from "next/image";
 
 import { useCurrentScene, useUtilitiesTracker } from "../hooks/stats";
+import { MdWaterDrop } from "react-icons/md";
+import { BsLightningChargeFill } from "react-icons/bs";
+import { GiHealthNormal } from "react-icons/gi";
 
 const Scene = () => {
   const currentId = useCurrentScene((state) => state.sceneId);
@@ -22,9 +25,9 @@ const Scene = () => {
     <div className="min-h-screen flex flex-col items-center relative">
       <div className="flex justify-center gap-4 py-2 px-4 sm:px-6 lg:px-8 items-center">
         <div className="flex-col bg-white rounded-lg shadow-lg p-4 self-center">
-          <p className="text-lg">Water: {water}</p>
-          <p className="text-lg">Electricity: {electricity}</p>
-          <p className="text-lg">HP: {hp}</p>
+          <p className="text-lg"><MdWaterDrop className="inline-block text-blue-500" /> Water: {water}</p>
+          <p className="text-lg"><BsLightningChargeFill className="inline-block text-yellow-500" /> Electricity: {electricity}</p>
+          <p className="text-lg"><GiHealthNormal className="inline-block text-red-500" /> HP: {hp}</p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-4 self-center">
           <Image

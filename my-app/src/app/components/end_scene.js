@@ -1,5 +1,7 @@
 import { useCurrentGameState, useUtilitiesTracker } from "../hooks/stats";
-
+import { MdWaterDrop } from "react-icons/md";
+import { BsLightningChargeFill } from "react-icons/bs";
+import { GiHealthNormal } from "react-icons/gi";
 
 const EndScene = () => {
   const startGame = useCurrentGameState((state) => state.setToStart);
@@ -13,15 +15,15 @@ const EndScene = () => {
       <div className="text-xl font-bold mt-4">Your Results</div>
       <div className="bg-gray-800 p-4 rounded shadow-md w-1/2">
         <div className="flex items-center justify-between w-full">
-          <div className="text-lg text-gray-300">Water:</div>
+          <div className="text-lg text-gray-300"><MdWaterDrop className="inline-block text-blue-500" /> Water:</div>
           <div className="text-lg text-white">{water}</div>
         </div>
         <div className="flex items-center justify-between w-full">
-          <div className="text-lg text-gray-300">Electricity:</div>
+          <div className="text-lg text-gray-300"><BsLightningChargeFill className="inline-block text-yellow-500" /> Electricity:</div>
           <div className="text-lg text-white">{electricity}</div>
         </div>
         <div className="flex items-center justify-between w-full">
-          <div className="text-lg text-gray-300">HP:</div>
+          <div className="text-lg text-gray-300"><GiHealthNormal className="inline-block text-red-500" /> HP:</div>
           <div className="text-lg text-white">{hp}</div>
         </div>
       </div>
