@@ -1,12 +1,13 @@
 import { create } from "zustand";
 
 const useUtilitiesTracker = create((set) => ({
-  electricity: 10,
-  water: 10,
-  setElectricity: (value) =>
-    set((state) => ({ electricity: state.electricty - value })),
+  electricity: 100,
+  water: 100,
+  hp: 100,
+  setElectricity: (value) => set((state) => ({ electricity: state.electricity - value })),
   setWater: (value) => set((state) => ({ water: state.water - value })),
-  reset: () => set((state) => ({ water: 10, electricity: 10 })),
+  setHp: (value) => set((state) => ({ hp: state.hp - value })),
+  reset: () => set((state) => ({ water: 100, electricity: 100, hp: 100 })),
 }));
 
 const useCurrentScene = create((set) => ({

@@ -14,14 +14,13 @@ const OptionsButton = ({ option_id, currentId }) => {
   const option_image_url =
     "/images/" + cyoa.scenarios[currentId].options[option_id].image_path;
 
-  const updateElectricity = useUtilitiesTracker(
-    (state) => state.setElectricity
-  );
+    const water = useUtilitiesTracker((state) => state.water);
+    const updateWater = useUtilitiesTracker((state) => state.setWater);
+    const electricity = useUtilitiesTracker((state) => state.electricity);
+    const updateElectricity = useUtilitiesTracker((state) => state.setElectricity);
+    const hp = useUtilitiesTracker((state) => state.hp);
+    const updateHp = useUtilitiesTracker((state) => state.setHp);
 
-  const updateWater = useUtilitiesTracker((state) => state.setWater);
-  const water = useUtilitiesTracker((state) => state.water);
-
-  const electricity = useUtilitiesTracker((state) => state.electricity);
   const incrementScene = useCurrentScene((state) => state.incrementSceneId);
 
   const endGame = useCurrentGameState((state) => state.setToEnd);
@@ -32,6 +31,7 @@ const OptionsButton = ({ option_id, currentId }) => {
       onClick={() => {
         updateElectricity(option_data.cost.electricity);
         updateWater(option_data.cost.water);
+        updateHp(option_data.cost.hp);
         incrementScene();
         console.log(water)
         console.log(currentId);
