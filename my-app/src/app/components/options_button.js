@@ -51,7 +51,7 @@ const OptionsButton = ({ option_id, currentId }) => {
           width={160}
           height={90}
         />
-        {option_data.name}
+        {option_data.name} -{option_data.cost.water} water -{option_data.cost.electricity} electricity -{option_data.cost.hp} hp
       </div>
     </button>
   );
