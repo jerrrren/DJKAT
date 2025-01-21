@@ -7,7 +7,7 @@ import {
 } from "../hooks/stats";
 import { use } from "react";
 
-const MAX_SCENE_ID = 2;
+const MAX_SCENE_ID = 4;
 
 const OptionsButton = ({ option_id, currentId }) => {
   const option_data = cyoa.scenarios[currentId].options[option_id];

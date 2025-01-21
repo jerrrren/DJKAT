@@ -8,9 +8,6 @@ import { useCurrentGameState } from "../hooks/stats";
 
 const Page = () => {
   const currentGameState = useCurrentGameState((state) => state.gameState);
-
-
-
   
   switch (currentGameState) {
     case 0:
