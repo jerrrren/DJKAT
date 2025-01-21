@@ -9,8 +9,8 @@ const EndScene = () => {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="text-3xl font-bold text-white">Thanks for playing!</div>
-      <div className="text-xl font-bold mt-4 text-white">Your Results</div>
+      <div className="text-3xl font-bold">Thanks for playing!</div>
+      <div className="text-xl font-bold mt-4">Your Results</div>
       <div className="bg-gray-800 p-4 rounded shadow-md w-1/2">
         <div className="flex items-center justify-between w-full">
           <div className="text-lg text-gray-300">Water:</div>
