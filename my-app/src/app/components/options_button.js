@@ -54,7 +54,7 @@ const OptionsButton = ({ option_id, currentId }) => {
         height={90}
       />
       <div className="flex flex-col pl-2">
-        <div className="font-bold">{option_data.name}</div>
+        <div className="font-bold text-left">{option_data.name}</div>
         <div className="text-sm flex flex-row items-center space-x-2 ">
           <div>Cost: </div>
           <div>
