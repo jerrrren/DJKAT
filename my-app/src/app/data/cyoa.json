@@ -121,78 +121,78 @@
         {
             "id": 4,
             "time": "6:00 PM",
-            "title": "Dinner Preparation",
-            "description": "Evening light filters through your windows as you step into your kitchen, the day's challenges still fresh in your mind. The contents of your pantry tell a story of careful rationing and thoughtful planning. Your evening meal - once a simple affair of preference and craving - has evolved into a delicate equation of resource management.",
+            "title": "Evening Chores",
+            "description": "The evening light streams through your windows as you survey your living space. Dust motes dance in the air, and the floor shows signs of the day's activities. In this resource-conscious world, even basic cleaning tasks require careful consideration of their environmental impact. As you contemplate your cleaning options, you must balance the necessity of maintaining a hygienic living space against the precious resources each method consumes.",
             "image_path": "scene4/scenario.png",
             "options": [
                 {
                     "image_path": "scene4/6PM_OPTION_1.png",
-                    "name": "Cook fresh meal",
+                    "name": "Vacuum cleaning",
                     "cost": {
-                        "water": 10,
-                        "electricity": 20,
+                        "water": 0,
+                        "electricity": 25,
                         "hp": 0
                     },
-                    "justification": "Cooking a fresh meal requires multiple appliances like stoves, ovens, and potentially microwaves, consuming significant electricity. Water is used for ingredient preparation, cooking, and cleaning, making this the most resource-intensive but nutritionally complete option."
+                    "justification": "A typical vacuum cleaner consumes significant electricity, ranging from 500-1200 watts during operation. While it provides thorough cleaning, the high power consumption makes this the most resource-intensive option. The effectiveness of cleaning prevents negative health impacts despite the resource cost."
                 },
                 {
                     "image_path": "scene4/6PM_OPTION_2.png",
-                    "name": "Eat preserved foods",
+                    "name": "Sweep and mop",
                     "cost": {
-                        "water": 0,
-                        "electricity": 5,
-                        "hp": 5
-                    },
-                    "justification": "Preserved foods require minimal heating, typically using a microwave or minimal stove time, thus consuming low electricity. However, the preserved nature of the food results in lower nutritional value and potential health compromises."
-                },
-                {
-                    "image_path": "scene4/6PM_OPTION_3.png",
-                    "name": "Cold sandwich",
-                    "cost": {
-                        "water": 0,
+                        "water": 15,
                         "electricity": 0,
                         "hp": 10
                     },
-                    "justification": "A cold sandwich requires no energy input whatsoever, representing the most resource-conservative option. The lack of preparation and potentially limited nutritional variety results in a negative health impact due to reduced food quality and satisfaction."
+                    "justification": "Traditional mopping requires moderate water usage for both cleaning and rinsing the mop. While using no electricity, the physical exertion and exposure to dust during sweeping can cause minor respiratory irritation and fatigue."
+                },
+                {
+                    "image_path": "scene4/6PM_OPTION_3.png",
+                    "name": "Basic sweeping",
+                    "cost": {
+                        "water": 0,
+                        "electricity": 0,
+                        "hp": 15
+                    },
+                    "justification": "Manual sweeping does not require electricity or water, making it the most resource-conservative option. However, the physical strain of sweeping combined with less effective dust control results in higher negative health impact. The inability to deep clean and the stirring up of dust particles without proper containment contributes to the health penalty."
                 }
             ]
         },
         {
             "id": 5,
             "time": "9:00 PM",
-            "title": "Evening Comfort",
-            "description": "Night brings little relief from the day's heat, and your thoughts turn to securing restful sleep in these challenging conditions. The darkness outside is punctuated by the dim lights of other homes, each facing the same difficult choices. Your decision about tonight's sleeping conditions will affect not only your rest but your readiness for tomorrow's challenges.",
+            "title": "Evening Unwinding",
+            "description": "The day's challenges slowly fade as you seek a moment of respite in your home. The evening hours offer a precious window for relaxation, but even leisure activities now require careful consideration of resource usage. As you contemplate how to unwind, you weigh the comfort of entertainment against its environmental cost.",
             "image_path": "scene5/scenario.png",
             "options": [
                 {
                     "image_path": "scene5/9PM_OPTION_1.png",
-                    "name": "Sleep with AC",
+                    "name": "Play with gaming console",
                     "cost": {
                         "water": 0,
                         "electricity": 30,
                         "hp": 0
                     },
-                    "justification": "Running air conditioning throughout the night consumes the most electricity, typically 500-1500 watts continuously. The extended operation time multiplies the energy consumption, representing the most resource-intensive cooling method with potential broader infrastructure implications."
+                    "justification": "Using devices like TVs and gaming consoles consumes moderate electricity, typically 100-300 watts depending on the device."
                 },
                 {
                     "image_path": "scene5/9PM_OPTION_2.png",
-                    "name": "Use fan overnight",
+                    "name": "Read a book with lamp",
                     "cost": {
                         "water": 0,
-                        "electricity": 15,
+                        "electricity": 10,
                         "hp": 5
                     },
-                    "justification": "Fans consume lower electricity when running continuously, around 50-100 watts. They provide basic air circulation and mild cooling, offering a compromise between comfort and resource conservation with moderate energy expenditure."
+                    "justification": "Reading with a small LED lamp requires minimal electricity, usually 5-15 watts. This option provides mental stimulation and relaxation while maintaining minimal resource consumption, offering a balanced approach to evening leisure."
                 },
                 {
                     "image_path": "scene5/9PM_OPTION_3.png",
-                    "name": "Open windows",
+                    "name": "Go straight to sleep",
                     "cost": {
                         "water": 0,
                         "electricity": 0,
                         "hp": 10
                     },
-                    "justification": "Opening windows uses no electricity but exposes you to external temperature variations and potential humidity. The lack of active cooling results in disrupted sleep and physical discomfort from environmental conditions, represented by the negative health points."
+                    "justification": "While using no resources, going to bed immediately after daily activities without any wind-down period disrupts natural circadian rhythms and stress recovery processes. The abrupt transition from activity to sleep can lead to poor sleep quality, increased stress levels, and inadequate mental recovery, resulting in negative health impacts that carry over to the next day."
                 }
             ]
         }
