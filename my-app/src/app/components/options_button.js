@@ -28,22 +28,24 @@ const OptionsButton = ({ option_id, currentId }) => {
 
   const endGame = useCurrentGameState((state) => state.setToEnd);
 
+  const disabled =
+    water - option_data.cost.water < 0 ||
+    electricity - option_data.cost.electricity < 0 ||
+    hp - option_data.cost.hp < 0;
+
   return (
     <button
-      className="grid-item bg-gray-200 hover:bg-gray-300 p-2 flex flex-row items-center rounded-lg"
+      className={`grid-item bg-gray-200 hover:bg-gray-300 p-2 flex flex-row items-center rounded-lg 
+        ${disabled ? "cursor-not-allowed opacity-50" : ""}`}
       onClick={() => {
-        updateElectricity(option_data.cost.electricity);
-        updateWater(option_data.cost.water);
-        updateHp(option_data.cost.hp);
-        incrementScene();
-        console.log(water)
-        console.log(currentId);
-        if ((water < 0) | (electricity < 0)) {
-          console.log("endGame")
-          endGame();
-        }
-        if (currentId >= MAX_SCENE_ID) {
-          endGame();
+        if (!disabled) {
+          updateElectricity(option_data.cost.electricity);
+          updateWater(option_data.cost.water);
+          updateHp(option_data.cost.hp);
+          incrementScene();
+          if (currentId >= MAX_SCENE_ID) {
+            endGame();
+          }
         }
       }}
     >
