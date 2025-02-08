@@ -10,23 +10,13 @@
             "options": [
                 {
                     "image_path": "scene1/6AM_OPTION_1.png",
-                    "name": "Take a cold shower",
+                    "name": "Skip washing up",
                     "cost": {
-                        "water": 10,
+                        "water": 0,
                         "electricity": 0,
-                        "hp": 5
+                        "hp": 30
                     },
-                    "justification": "Cold showers use significantly less water as they are shorter and require no water heating. The water flow is typically reduced to minimize discomfort, directly translating to lower water consumption while providing basic hygiene needs."
-                },
-                {
-                    "image_path": "scene1/6AM_OPTION_2.png",
-                    "name": "Take a hot shower",
-                    "cost": {
-                        "water": 20,
-                        "electricity": 10,
-                        "hp": 0
-                    },
-                    "justification": "Hot water requires extensive energy to heat, consuming both water and electricity. The water heater operates at full capacity, drawing substantial power and using more water volume to achieve and maintain desired temperature, while the prolonged shower time increases overall resource drain."
+                    "justification": "Skipping cleaning altogether saves both water and electricity entirely but comes at the expense of personal hygiene and health. Over time, this could lead to discomfort and potential health risks."
                 },
                 {
                     "image_path": "scene1/6AM_OPTION_3.png",
@@ -37,6 +27,16 @@
                         "hp": 10
                     },
                     "justification": "Using a damp washcloth requires minimal water, typically just enough to moisten the cloth. The reduced water usage comes at the cost of personal comfort and thorough cleaning, resulting in lower water consumption but a slight negative impact on personal health and hygiene."
+                },
+                {
+                    "image_path": "scene1/6AM_OPTION_2.png",
+                    "name": "Take a hot shower",
+                    "cost": {
+                        "water": 20,
+                        "electricity": 10,
+                        "hp": 0
+                    },
+                    "justification": "Hot water requires extensive energy to heat, consuming both water and electricity. The water heater operates at full capacity, drawing substantial power and using more water volume to achieve and maintain desired temperature, while the prolonged shower time increases overall resource drain."
                 }
             ]
         },
@@ -47,6 +47,16 @@
             "description": "You stand in your kitchen, surveying the limited options before you. With supply chains becoming increasingly unpredictable, each meal requires careful consideration of both nutrition and resource usage. Your breakfast choice could set the tone for the entire day.",
             "image_path": "scene2/scenario.png",
             "options": [
+                {
+                    "image_path": "scene2/7AM_OPTION_3.png",
+                    "name": "Skip breakfast",
+                    "cost": {
+                        "water": 0,
+                        "electricity": 0,
+                        "hp": 20
+                    },
+                    "justification": "Skipping breakfast entirely saves all resources but comes at a significant cost to personal health and energy levels. The lack of morning nutrition can lead to fatigue and reduced productivity throughout the day."
+                },
                 {
                     "image_path": "scene2/7AM_OPTION_1.png",
                     "name": "Microwave instant oatmeal",
@@ -66,16 +76,6 @@
                         "hp": 0
                     },
                     "justification": "A full breakfast involves multiple cooking appliances like stoves and ovens, consuming significant electricity. Additional water is used for washing ingredients, cooking, and cleaning, making this option the most resource-intensive but nutritionally complete choice."
-                },
-                {
-                    "image_path": "scene2/7AM_OPTION_3.png",
-                    "name": "Cold breakfast",
-                    "cost": {
-                        "water": 0,
-                        "electricity": 0,
-                        "hp": 10
-                    },
-                    "justification": "Consuming a cold breakfast like cereal or pre-prepared items requires no energy input whatsoever. However, the lack of hot preparation and potentially reduced food quality results in a negative health impact due to lower nutritional value and less satisfying meal."
                 }
             ]
         },
@@ -86,6 +86,16 @@
             "description": "The merciless afternoon sun transforms your workspace into a challenge of endurance. The city's strained power grid groans under the collective burden of millions seeking relief from the heat. As the temperature climbs, you're faced with the daily dilemma of balancing comfort against conservation.",
             "image_path": "scene3/scenario.png",
             "options": [
+                {
+                    "image_path": "scene3/1PM_OPTION_3.png",
+                    "name": "Open windows",
+                    "cost": {
+                        "water": 0,
+                        "electricity": 0,
+                        "hp": 10
+                    },
+                    "justification": "Opening windows uses no electricity but exposes you to external heat and humidity. The lack of active cooling results in physical discomfort and potential health impacts from heat stress, represented by the negative health points."
+                },
                 {
                     "image_path": "scene3/1PM_OPTION_1.png",
                     "name": "Use fan",
@@ -105,16 +115,6 @@
                         "hp": 0
                     },
                     "justification": "Air conditioning units consume substantial electricity, often ranging from 500-1500 watts, depending on size and efficiency. The comprehensive cooling comes at a high energy cost, potentially stressing the electrical grid and causing significant resource depletion."
-                },
-                {
-                    "image_path": "scene3/1PM_OPTION_3.png",
-                    "name": "Open windows",
-                    "cost": {
-                        "water": 0,
-                        "electricity": 0,
-                        "hp": 10
-                    },
-                    "justification": "Opening windows uses no electricity but exposes you to external heat and humidity. The lack of active cooling results in physical discomfort and potential health impacts from heat stress, represented by the negative health points."
                 }
             ]
         },
@@ -125,6 +125,16 @@
             "description": "The evening light streams through your windows as you survey your living space. Dust motes dance in the air, and the floor shows signs of the day's activities. In this resource-conscious world, even basic cleaning tasks require careful consideration of their environmental impact. As you contemplate your cleaning options, you must balance the necessity of maintaining a hygienic living space against the precious resources each method consumes.",
             "image_path": "scene4/scenario.png",
             "options": [
+                {
+                    "image_path": "scene4/6PM_OPTION_3.png",
+                    "name": "Basic sweeping",
+                    "cost": {
+                        "water": 0,
+                        "electricity": 0,
+                        "hp": 15
+                    },
+                    "justification": "Manual sweeping does not require electricity or water, making it the most resource-conservative option. However, the physical strain of sweeping combined with less effective dust control results in higher negative health impact. The inability to deep clean and the stirring up of dust particles without proper containment contributes to the health penalty."
+                },
                 {
                     "image_path": "scene4/6PM_OPTION_1.png",
                     "name": "Vacuum cleaning",
@@ -144,16 +154,6 @@
                         "hp": 10
                     },
                     "justification": "Traditional mopping requires moderate water usage for both cleaning and rinsing the mop. While using no electricity, the physical exertion and exposure to dust during sweeping can cause minor respiratory irritation and fatigue."
-                },
-                {
-                    "image_path": "scene4/6PM_OPTION_3.png",
-                    "name": "Basic sweeping",
-                    "cost": {
-                        "water": 0,
-                        "electricity": 0,
-                        "hp": 15
-                    },
-                    "justification": "Manual sweeping does not require electricity or water, making it the most resource-conservative option. However, the physical strain of sweeping combined with less effective dust control results in higher negative health impact. The inability to deep clean and the stirring up of dust particles without proper containment contributes to the health penalty."
                 }
             ]
         },
@@ -165,14 +165,14 @@
             "image_path": "scene5/scenario.png",
             "options": [
                 {
-                    "image_path": "scene5/9PM_OPTION_1.png",
-                    "name": "Play with gaming console",
+                    "image_path": "scene5/9PM_OPTION_3.png",
+                    "name": "Go straight to sleep",
                     "cost": {
                         "water": 0,
-                        "electricity": 30,
-                        "hp": 0
+                        "electricity": 0,
+                        "hp": 10
                     },
-                    "justification": "Using devices like TVs and gaming consoles consumes moderate electricity, typically 100-300 watts depending on the device."
+                    "justification": "While using no resources, going to bed immediately after daily activities without any wind-down period disrupts natural circadian rhythms and stress recovery processes. The abrupt transition from activity to sleep can lead to poor sleep quality, increased stress levels, and inadequate mental recovery, resulting in negative health impacts that carry over to the next day."
                 },
                 {
                     "image_path": "scene5/9PM_OPTION_2.png",
@@ -185,14 +185,14 @@
                     "justification": "Reading with a small LED lamp requires minimal electricity, usually 5-15 watts. This option provides mental stimulation and relaxation while maintaining minimal resource consumption, offering a balanced approach to evening leisure."
                 },
                 {
-                    "image_path": "scene5/9PM_OPTION_3.png",
-                    "name": "Go straight to sleep",
+                    "image_path": "scene5/9PM_OPTION_1.png",
+                    "name": "Play with gaming console",
                     "cost": {
                         "water": 0,
-                        "electricity": 0,
-                        "hp": 10
+                        "electricity": 30,
+                        "hp": 0
                     },
-                    "justification": "While using no resources, going to bed immediately after daily activities without any wind-down period disrupts natural circadian rhythms and stress recovery processes. The abrupt transition from activity to sleep can lead to poor sleep quality, increased stress levels, and inadequate mental recovery, resulting in negative health impacts that carry over to the next day."
+                    "justification": "Using devices like TVs and gaming consoles consumes moderate electricity, typically 100-300 watts depending on the device."
                 }
             ]
         }
