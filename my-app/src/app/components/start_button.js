@@ -5,6 +5,10 @@ import {
     useCurrentScene,
 } from "../hooks/stats";
 
+import {
+    resetItems
+ } from "../utils/utils"
+
 const EpicStartButton = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
@@ -17,6 +21,7 @@ const EpicStartButton = () => {
         playGame();
         resetUtilities();
         resetSceneId();
+        resetItems();
     };
 
     return (
@@ -34,6 +39,7 @@ const EpicStartButton = () => {
             onMouseLeave={() => setIsHovered(false)}
             onClick={handleClick}
             onAnimationEnd={() => setIsClicked(false)}
+
         >
             <span className="relative z-10 flex items-center justify-center gap-2">
                 <svg
