@@ -29,7 +29,7 @@ const FeedbackScene = () => {
           onClick={() => toggleExpand(scenarioIndex)}
         >
           <div className="flex justify-between items-center p-2 bg-gray-200 rounded-t-lg cursor-pointer hover:bg-gray-300 transition-colors">
-            <h3 className="font-bold">Scenario {scenarioIndex + 1}: {scenario.title}</h3>
+            <h3 className="font-bold">Scenario {scenarioIndex + 1}: Your Choice</h3>
             {expandedItems[scenarioIndex] ?
               <MdExpandLess className="text-2xl text-blue-600" /> :
               <MdExpandMore className="text-2xl text-blue-600" />
@@ -37,8 +37,9 @@ const FeedbackScene = () => {
           </div>
 
           <div className="bg-white p-2 rounded-b-lg shadow-sm group cursor-pointer hover:bg-blue-50 transition-colors">
-            <div className="flex flex-row">
-              <div className="w-40 h-auto relative" style={{ aspectRatio: '16/9' }}>
+            {/* First row: Image, name, and costs */}
+            <div className="flex flex-row items-center">
+              <div className="w-24 sm:w-32 md:w-40 h-auto relative flex-shrink-0" style={{ aspectRatio: '16/9' }}>
                 <Image
                   alt={selectedOption.name}
                   src={selectedOptionImageUrl}
@@ -47,25 +48,29 @@ const FeedbackScene = () => {
                   className="rounded-md transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="flex-1 ml-3">
+              <div className="ml-2 sm:ml-3 flex-1">
                 <div className="font-medium group-hover:text-blue-700 transition-colors">{selectedOption.name}</div>
-                <div className="text-sm flex flex-row items-center space-x-2 mb-1">
+                <div className="text-xs sm:text-sm flex flex-row items-center flex-wrap gap-1 sm:gap-2">
                   <div>Cost: </div>
-                  <div>
+                  <div className="flex items-center">
                     {selectedOption.cost.water}
                     <MdWaterDrop className="inline-block text-blue-500" />
                   </div>
-                  <div>
+                  <div className="flex items-center">
                     {selectedOption.cost.electricity}
                     <BsLightningChargeFill className="inline-block text-yellow-500" />
                   </div>
-                  <div>
+                  <div className="flex items-center">
                     {selectedOption.cost.hp}
                     <GiHealthNormal className="inline-block text-red-500" />
                   </div>
                 </div>
-                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">{selectedOption.justification}</div>
               </div>
+            </div>
+
+            {/* Second row: Description */}
+            <div className="mt-2 text-sm text-gray-800 transition-colors">
+              {selectedOption.justification}
             </div>
           </div>
         </div>
@@ -80,8 +85,9 @@ const FeedbackScene = () => {
 
               return (
                 <div key={optionIndex} className="bg-white p-2 mb-2 rounded-lg shadow-sm">
-                  <div className="flex flex-row">
-                    <div className="w-40 h-auto relative" style={{ aspectRatio: '16/9' }}>
+                  {/* First row: Image, name, and costs */}
+                  <div className="flex flex-row items-center">
+                    <div className="w-24 sm:w-32 md:w-40 h-auto relative flex-shrink-0" style={{ aspectRatio: '16/9' }}>
                       <Image
                         alt={option.name}
                         src={optionImageUrl}
@@ -90,25 +96,29 @@ const FeedbackScene = () => {
                         className="rounded-md"
                       />
                     </div>
-                    <div className="flex-1 ml-3">
+                    <div className="ml-2 sm:ml-3 flex-1">
                       <div className="font-medium">{option.name}</div>
-                      <div className="text-sm flex flex-row items-center space-x-2 mb-1">
+                      <div className="text-xs sm:text-sm flex flex-row items-center flex-wrap gap-1 sm:gap-2">
                         <div>Cost: </div>
-                        <div>
+                        <div className="flex items-center">
                           {option.cost.water}
                           <MdWaterDrop className="inline-block text-blue-500" />
                         </div>
-                        <div>
+                        <div className="flex items-center">
                           {option.cost.electricity}
                           <BsLightningChargeFill className="inline-block text-yellow-500" />
                         </div>
-                        <div>
+                        <div className="flex items-center">
                           {option.cost.hp}
                           <GiHealthNormal className="inline-block text-red-500" />
                         </div>
                       </div>
-                      <div className="text-sm text-gray-600">{option.justification}</div>
                     </div>
+                  </div>
+
+                  {/* Second row: Description */}
+                  <div className="mt-2 text-sm text-gray-800">
+                    {option.justification}
                   </div>
                 </div>
               );
