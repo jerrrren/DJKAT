@@ -10,7 +10,9 @@ const EndScene = () => {
   const water = useUtilitiesTracker((state) => state.water);
   const electricity = useUtilitiesTracker((state) => state.electricity);
 
-  const score = (water + electricity + hp) / 3;
+  // Player should minimize the difference between resources and HP
+  const resourceScore = (water + electricity) / 2
+  const score = 100 - Math.abs(resourceScore - hp)
 
   let content;
 
