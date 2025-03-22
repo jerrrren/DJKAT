@@ -1,56 +1,132 @@
 import cyoa from "../data/cyoa";
 import Image from "next/image";
-import { MdWaterDrop } from "react-icons/md";
+import { MdWaterDrop, MdExpandMore, MdExpandLess } from "react-icons/md";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { GiHealthNormal } from "react-icons/gi";
+import { useState } from "react";
 
 const FeedbackScene = () => {
-  const AllFeedBack = JSON.parse(localStorage.getItem("history")).map(
-    (item, index) => {
-      const option_data = cyoa.scenarios[index].options[item];
-      const option_image_url =
-        "/images/" + cyoa.scenarios[index].options[item].image_path;
+  const [expandedItems, setExpandedItems] = useState({});
 
-      return (
+  const toggleExpand = (index) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const history = JSON.parse(localStorage.getItem("history") || "[]");
+
+  const AllFeedBack = history.map((selectedOptionIndex, scenarioIndex) => {
+    const scenario = cyoa.scenarios[scenarioIndex];
+    const selectedOption = scenario.options[selectedOptionIndex];
+    const selectedOptionImageUrl = "/images/" + selectedOption.image_path;
+
+    return (
+      <div key={scenarioIndex} className="mb-4">
         <div
-          key={index}
-          className={`grid-item bg-gray-200 p-2 flex flex-row justify-between rounded-lg `}
+          className="rounded-lg transform transition-all duration-200 hover:scale-102 hover:shadow-lg"
+          onClick={() => toggleExpand(scenarioIndex)}
         >
-          <Image
-            alt={option_data.name}
-            src={option_image_url}
-            width={160}
-            height={90}
-          />
-          <div>
-            <div className="font-bold text-left pl-1">{option_data.name}</div>
+          <div className="flex justify-between items-center p-2 bg-gray-200 rounded-t-lg cursor-pointer hover:bg-gray-300 transition-colors">
+            <h3 className="font-bold">Scenario {scenarioIndex + 1}: {scenario.title}</h3>
+            {expandedItems[scenarioIndex] ?
+              <MdExpandLess className="text-2xl text-blue-600" /> :
+              <MdExpandMore className="text-2xl text-blue-600" />
+            }
+          </div>
 
-            <div className="flex flex-row pl-1 pr-1 items-start">
-              <div className="text-sm flex flex-row items-center space-x-2 ">
-                <div>Cost: </div>
-                <div>
-                  {option_data.cost.water}
-                  <MdWaterDrop className="inline-block text-blue-500" />
-                </div>
-                <div>
-                  {option_data.cost.electricity}
-                  <BsLightningChargeFill className="inline-block text-yellow-500" />
-                </div>
-                <div>
-                  {option_data.cost.hp}
-                  <GiHealthNormal className="inline-block text-red-500" />
-                </div>
+          <div className="bg-white p-2 rounded-b-lg shadow-sm group cursor-pointer hover:bg-blue-50 transition-colors">
+            <div className="flex flex-row">
+              <div className="w-40 h-auto relative" style={{ aspectRatio: '16/9' }}>
+                <Image
+                  alt={selectedOption.name}
+                  src={selectedOptionImageUrl}
+                  fill={true}
+                  style={{ objectFit: 'contain' }}
+                  className="rounded-md transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
-              <div className="pl-1">{option_data.justification}</div>
+              <div className="flex-1 ml-3">
+                <div className="font-medium group-hover:text-blue-700 transition-colors">{selectedOption.name}</div>
+                <div className="text-sm flex flex-row items-center space-x-2 mb-1">
+                  <div>Cost: </div>
+                  <div>
+                    {selectedOption.cost.water}
+                    <MdWaterDrop className="inline-block text-blue-500" />
+                  </div>
+                  <div>
+                    {selectedOption.cost.electricity}
+                    <BsLightningChargeFill className="inline-block text-yellow-500" />
+                  </div>
+                  <div>
+                    {selectedOption.cost.hp}
+                    <GiHealthNormal className="inline-block text-red-500" />
+                  </div>
+                </div>
+                <div className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">{selectedOption.justification}</div>
+              </div>
             </div>
-            
           </div>
         </div>
-      );
-    }
-  );
 
-  return AllFeedBack;
+        {/* Dropdown with alternative options */}
+        {expandedItems[scenarioIndex] && (
+          <div className="mt-2 ml-4 border-l-2 border-blue-400 pl-4">
+            <h3 className="font-semibold text-gray-700 mb-2">Other options you could have chosen:</h3>
+            {scenario.options.map((option, optionIndex) => {
+              if (optionIndex === selectedOptionIndex) return null; // Skip the selected option
+              const optionImageUrl = "/images/" + option.image_path;
+
+              return (
+                <div key={optionIndex} className="bg-white p-2 mb-2 rounded-lg shadow-sm">
+                  <div className="flex flex-row">
+                    <div className="w-40 h-auto relative" style={{ aspectRatio: '16/9' }}>
+                      <Image
+                        alt={option.name}
+                        src={optionImageUrl}
+                        fill={true}
+                        style={{ objectFit: 'contain' }}
+                        className="rounded-md"
+                      />
+                    </div>
+                    <div className="flex-1 ml-3">
+                      <div className="font-medium">{option.name}</div>
+                      <div className="text-sm flex flex-row items-center space-x-2 mb-1">
+                        <div>Cost: </div>
+                        <div>
+                          {option.cost.water}
+                          <MdWaterDrop className="inline-block text-blue-500" />
+                        </div>
+                        <div>
+                          {option.cost.electricity}
+                          <BsLightningChargeFill className="inline-block text-yellow-500" />
+                        </div>
+                        <div>
+                          {option.cost.hp}
+                          <GiHealthNormal className="inline-block text-red-500" />
+                        </div>
+                      </div>
+                      <div className="text-sm text-gray-600">{option.justification}</div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  });
+
+  return (
+    <div className="feedback-container">
+      {AllFeedBack.length > 0 ?
+        AllFeedBack :
+        <div className="text-center text-gray-500">No history available</div>
+      }
+    </div>
+  );
 };
 
 export default FeedbackScene;
