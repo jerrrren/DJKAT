@@ -14,7 +14,7 @@
                     "cost": {
                         "water": 0,
                         "electricity": 0,
-                        "hp": 30
+                        "hp": 20
                     },
                     "justification": "Skipping cleaning altogether saves both water and electricity entirely but comes at the expense of personal hygiene and health. Over time, this could lead to discomfort and potential health risks."
                 },
@@ -22,7 +22,7 @@
                     "image_path": "scene1/6AM_OPTION_3.png",
                     "name": "Quick wipe-down with washcloth",
                     "cost": {
-                        "water": 5,
+                        "water": 20,
                         "electricity": 0,
                         "hp": 10
                     },
@@ -32,7 +32,7 @@
                     "image_path": "scene1/6AM_OPTION_2.png",
                     "name": "Take a hot shower",
                     "cost": {
-                        "water": 20,
+                        "water": 30,
                         "electricity": 10,
                         "hp": 0
                     },
@@ -61,9 +61,9 @@
                     "image_path": "scene2/7AM_OPTION_1.png",
                     "name": "Microwave instant oatmeal",
                     "cost": {
-                        "water": 0,
-                        "electricity": 5,
-                        "hp": 5
+                        "water": 10,
+                        "electricity": 10,
+                        "hp": 10
                     },
                     "justification": "Microwaving requires minimal electricity, typically using around 600-1200 watts for a short duration. Instant oatmeal needs minimal preparation time, translating to low energy consumption while providing basic nutritional intake."
                 },
@@ -71,8 +71,8 @@
                     "image_path": "scene2/7AM_OPTION_2.png",
                     "name": "Cook full breakfast",
                     "cost": {
-                        "water": 10,
-                        "electricity": 15,
+                        "water": 20,
+                        "electricity": 20,
                         "hp": 0
                     },
                     "justification": "A full breakfast involves multiple cooking appliances like stoves and ovens, consuming significant electricity. Additional water is used for washing ingredients, cooking, and cleaning, making this option the most resource-intensive but nutritionally complete choice."
@@ -92,7 +92,7 @@
                     "cost": {
                         "water": 0,
                         "electricity": 0,
-                        "hp": 10
+                        "hp": 20
                     },
                     "justification": "Opening windows uses no electricity but exposes you to external heat and humidity. The lack of active cooling results in physical discomfort and potential health impacts from heat stress, represented by the negative health points."
                 },
@@ -101,8 +101,8 @@
                     "name": "Use fan",
                     "cost": {
                         "water": 0,
-                        "electricity": 10,
-                        "hp": 5
+                        "electricity": 20,
+                        "hp": 10
                     },
                     "justification": "Fans consume relatively low electricity, typically 50-100 watts, providing basic air circulation. While less effective than air conditioning, they offer some cooling with minimal energy drain, making them a resource-efficient cooling solution."
                 },
@@ -111,7 +111,7 @@
                     "name": "Use air conditioning",
                     "cost": {
                         "water": 0,
-                        "electricity": 25,
+                        "electricity": 40,
                         "hp": 0
                     },
                     "justification": "Air conditioning units consume substantial electricity, often ranging from 500-1500 watts, depending on size and efficiency. The comprehensive cooling comes at a high energy cost, potentially stressing the electrical grid and causing significant resource depletion."
@@ -131,7 +131,7 @@
                     "cost": {
                         "water": 0,
                         "electricity": 0,
-                        "hp": 15
+                        "hp": 20
                     },
                     "justification": "Manual sweeping does not require electricity or water, making it the most resource-conservative option. However, the physical strain of sweeping combined with less effective dust control results in higher negative health impact. The inability to deep clean and the stirring up of dust particles without proper containment contributes to the health penalty."
                 },
@@ -140,8 +140,8 @@
                     "name": "Vacuum cleaning",
                     "cost": {
                         "water": 0,
-                        "electricity": 25,
-                        "hp": 0
+                        "electricity": 20,
+                        "hp": 10
                     },
                     "justification": "A typical vacuum cleaner consumes significant electricity, ranging from 500-1200 watts during operation. While it provides thorough cleaning, the high power consumption makes this the most resource-intensive option. The effectiveness of cleaning prevents negative health impacts despite the resource cost."
                 },
@@ -149,7 +149,7 @@
                     "image_path": "scene4/6PM_OPTION_2.png",
                     "name": "Sweep and mop",
                     "cost": {
-                        "water": 15,
+                        "water": 20,
                         "electricity": 0,
                         "hp": 10
                     },
@@ -170,7 +170,7 @@
                     "cost": {
                         "water": 0,
                         "electricity": 0,
-                        "hp": 10
+                        "hp": 20
                     },
                     "justification": "While using no resources, going to bed immediately after daily activities without any wind-down period disrupts natural circadian rhythms and stress recovery processes. The abrupt transition from activity to sleep can lead to poor sleep quality, increased stress levels, and inadequate mental recovery, resulting in negative health impacts that carry over to the next day."
                 },
@@ -180,7 +180,7 @@
                     "cost": {
                         "water": 0,
                         "electricity": 10,
-                        "hp": 5
+                        "hp": 10
                     },
                     "justification": "Reading with a small LED lamp requires minimal electricity, usually 5-15 watts. This option provides mental stimulation and relaxation while maintaining minimal resource consumption, offering a balanced approach to evening leisure."
                 },
