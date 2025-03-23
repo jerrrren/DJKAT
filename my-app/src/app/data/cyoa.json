@@ -179,7 +179,7 @@
                     "name": "Read a book with lamp",
                     "cost": {
                         "water": 0,
-                        "electricity": 10,
+                        "electricity": 20,
                         "hp": 10
                     },
                     "justification": "Reading with a small LED lamp requires minimal electricity, usually 5-15 watts. This option provides mental stimulation and relaxation while maintaining minimal resource consumption, offering a balanced approach to evening leisure."
@@ -189,7 +189,7 @@
                     "name": "Play with gaming console",
                     "cost": {
                         "water": 0,
-                        "electricity": 30,
+                        "electricity": 40,
                         "hp": 0
                     },
                     "justification": "Using devices like TVs and gaming consoles consumes moderate electricity, typically 100-300 watts depending on the device."
