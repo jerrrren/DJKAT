@@ -16,9 +16,9 @@ const EndScene = () => {
 
   let resultsImage;
 
-  if (score < 25) {
+  if (score <= 40) {
     resultsImage = "/result_bad.png";
-  } else if (score < 70) {
+  } else if (score <= 80) {
     resultsImage = "/result_avg.png";
   } else {
     resultsImage = "/result_good.png";
@@ -34,8 +34,8 @@ const EndScene = () => {
       <div className="flex flex-col md:flex-row w-full">
         {/* Left side - Results section */}
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
-          <div className="text-xl font-bold mb-4">Your Results</div>
-          <div className="bg-gray-800 p-4 rounded shadow-md grid grid-cols-2 gap-x-20 w-full max-w-md">
+          <div className="text-xl font-bold mb-2">Your Final Stats</div>
+          <div className="bg-gray-800 p-4 rounded shadow-md grid grid-cols-2 gap-x-20 w-full max-w-md mb-8">
             <div className="text-lg text-gray-300">
               <MdWaterDrop className="inline-block text-blue-500" /> Water:
             </div>
@@ -49,23 +49,21 @@ const EndScene = () => {
               <GiHealthNormal className="inline-block text-red-500" /> HP:
             </div>
             <div className="text-lg text-gray-300 text-right">{hp}</div>
-            <div className="text-2xl text-white">Score:</div>
-            <div className="text-2xl text-white text-right">
-              {score.toFixed()}/100
-            </div>
           </div>
+
+          {/* Results Image - Sized to be fully visible */}
+          <div className="text-xl font-bold mb-2">Your Resource Conservation Spirit Animal</div>
+          <div
+            className="w-full aspect-[16/9] bg-cover bg-center rounded-md mb-4"
+            style={{ backgroundImage: `url(${resultsImage})` }}
+          ></div>
+
           <button
             className="my-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={() => startGame()}
           >
-            Play Again
+            Play Again!
           </button>
-
-          {/* Results Image - Sized to be fully visible */}
-          <div
-            className="w-full aspect-[16/9] bg-cover bg-center rounded-md mt-2 mb-4"
-            style={{ backgroundImage: `url(${resultsImage})` }}
-          ></div>
         </div>
 
         {/* Right side - Feedback section */}
