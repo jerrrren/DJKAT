@@ -17,11 +17,11 @@ const EndScene = () => {
   let resultsImage;
 
   if (score <= 40) {
-    resultsImage = "/result_bad.png";
+    resultsImage = "/images/result_bad.png";
   } else if (score <= 80) {
-    resultsImage = "/result_avg.png";
+    resultsImage = "/images/result_avg.png";
   } else {
-    resultsImage = "/result_good.png";
+    resultsImage = "/images/result_good.png";
   }
 
   return (
