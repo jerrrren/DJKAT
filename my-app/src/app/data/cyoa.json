@@ -5,7 +5,7 @@
             "id": 1,
             "time": "6:00 AM",
             "title": "Wake Up",
-            "description": "The morning air hangs heavy with uncertainty as you rise. Recent infrastructure alerts have made it clear - the water and electricity you once took for granted are now precious commodities. Through your window, the dawn breaks over a city learning to adapt. As you prepare for your morning routine, each drop of water and volt of electricity feels more valuable than ever.",
+            "description": "Sixty days into The Disruption, the morning air hangs heavy with uncertainty as you rise. The prolonged crisis has pushed the city to its limits as local infrastructure struggles to provide even a fraction of the water and electricity needed to meet demand. Through your window, the dawn breaks over a community learning to scrape by, each day harder than the last. As you prepare for your morning routine, every drop of water and every volt of electricity feels more precious than ever, serving as a reminder of how fragile the comforts you once took for granted truly are.",
             "image_path": "scene1/scenario.png",
             "options": [
                 {
@@ -143,7 +143,7 @@
                         "electricity": 20,
                         "hp": 10
                     },
-                    "justification": "A typical vacuum cleaner consumes significant electricity, ranging from 500-1200 watts during operation. While it provides thorough cleaning, the high power consumption makes this the most resource-intensive option. The effectiveness of cleaning prevents negative health impacts despite the resource cost."
+                    "justification": "A typical vacuum cleaner consumes significant electricity, ranging from 500-1200 watts during operation. While it provides thorough cleaning, the high power consumption makes this the most resource-intensive option. The health cost reflects the physical effort required to operate the vacuum cleaner."
                 },
                 {
                     "image_path": "scene4/6PM_OPTION_2.png",
